@@ -1,1 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+$primary: #D5D3AC;
+$secondary: #FEA872;
+$highlight: #F47056;
+
+$trans: all 0.3s ease-in-out;
+
+::selection{
+  background: $highlight;
+  color: $primary;
+}
+
+::-webkit-input-placeholder {
+  color: #333;
+}
+
+i{
+  margin: 0;
+}
+
+body{
+  margin: 0;
+  background: #000;
+  font-family: 'Ubuntu', sans-serif;
+  color: $primary;
+}
+
+a{
+  color: inherit;
+  padding-bottom: 5px;
+  &:hover{
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid $primary;
+  }
+}
+
+#extra{
+  color: $highlight;
+  border-color: $highlight;
+}
+
+#muted{
+  color: #222;
+}
+
+.blink{
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.primary-button{
+  padding: 5px 15px;
+  margin-top: 10px;
+  color: $secondary;
+  border: 1px solid $secondary;
+  border-radius: 3px;
+  display: inline-flex;
+  max-width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  transition: $trans;
+  cursor: pointer;
+  &:hover{
+    color: #000;
+    background: $secondary;
+  }
+}
+
+@keyframes blinker {
+  0%{
+    color: #000;
+  }
+  50%{
+    color: inherit;
+  }
+  100%{
+    color: #000;
+  }
+}
+
+input{
+  display: block;
+  background: #000;
+  border: 1px solid $secondary;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 0;
+  &:focus{
+    border: 1px solid $secondary;
+    outline: 0;
+  }
+  &:active{
+    border: 1px solid $secondary;
+    outline: 0;
+  }
+}
+
+input[type="password"]{
+  color: $highlight;
+}
+
+.sun{
+  width: 50px;
+  height: 50px;
+  background: $secondary;
+  border-radius: 50%;
+}
+
+.planet{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #000;
+  border-radius: 50%;
+  border-top-color: $highlight;
+  animation-name: keplar;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(.17,.67,.76,.36);
+  animation-iteration-count: infinite;
+}
+
+@keyframes keplar {
+  0%{
+    transform: rotate(90deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.loader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

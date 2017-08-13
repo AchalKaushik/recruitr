@@ -1,0 +1,33 @@
+@import "src/styles.scss";
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  h1{
+    font-family: 'Ubunto Mono', monospace;
+  }
+  p{
+    width: 70%;
+  }
+}
+
+.user-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+}
+
+.user-signup{
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  span{
+    display: block;
+  }
+  .primary-button{
+    width: 100%;
+  }
+}

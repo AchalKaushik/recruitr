@@ -1,0 +1,32 @@
+@import "src/styles.scss";
+
+.nav-bar{
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding{
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  background: url("../../assets/codeCapitallogo.svg");
+  width: 50px;
+  height: 33.3333px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logotype{
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.funcs{
+  a,span{
+    margin-left: 10px;
+  }
+}
